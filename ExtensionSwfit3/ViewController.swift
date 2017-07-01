@@ -12,6 +12,20 @@ class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        let start = Date()
+        // Queue
+        DispatchQueue.global(qos: .userInteractive).async {
+            // Background thread
+            
+            DispatchQueue.main.async {
+                // Main UI thead
+                
+            }
+        }
+        let end = Date()
+        print("Elapsed Time: \(end.timeIntervalSince(start))")
+        
         // Do any additional setup after loading the view, typically from a nib.
     }
 
